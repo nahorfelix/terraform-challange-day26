@@ -1,0 +1,11 @@
+﻿app_name           = "web-challenge-day26"
+environment        = "dev"
+aws_region         = "us-east-1"
+ami_id             = "ami-0c02fb55956c7d316"
+vpc_id             = "vpc-xxxxxxxx"
+public_subnet_ids  = ["subnet-aaaa1111", "subnet-bbbb2222"]
+private_subnet_ids = ["subnet-cccc3333", "subnet-dddd4444"]
+min_size           = 1
+max_size           = 4
+desired_capacity   = 2
+
