@@ -49,7 +49,16 @@ resource "aws_launch_template" "web" {
     dnf install -y httpd || yum install -y httpd
     systemctl start httpd
     systemctl enable httpd
-    echo "<h1>Deployed with Terraform — environment: ${var.environment}</h1>" > /var/www/html/index.html
+    cat > /var/www/html/index.html <<HTML
+    <!DOCTYPE html>
+    <html>
+    <head><title>Day 26 Challenge</title></head>
+    <body>
+      <h1>Day 26 challenge, happy to have fixed it</h1>
+      <p>Environment: ${var.environment}</p>
+    </body>
+    </html>
+    HTML
   USERDATA
   )
 
